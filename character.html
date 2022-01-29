@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang=en>
+<title>Sundering Shadows Character Assistant</title>
+
+<meta charset=utf-8>
+<meta name=description content="">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta name=theme-color content=#fafafa>
+<link rel=stylesheet href=application.css>
+<!--
+<link rel=manifest href=site.webmanifest>
+<link rel=apple-touch-icon href=icon.png>
+-->
+
+<form>
+	
+	<fieldset id=character>
+		<legend>Character Details</legend>
+		
+		<dl>
+			<div>
+				<dt><label for=char-name>Name</label>
+				<dd><input id=char-name placeholder="Van Vonvolkvan Van">
+			</div>
+			<div>
+				<dt><label for=char-race>Race</label>
+				<dd><select id=char-race><!-- TODO: source from dataset -->
+					<option>Human
+					<option>Dwarf
+					<option>Centaur
+					<option>Orc
+					<!-- ... -->
+				</select>
+			</div>
+			<div>
+				<dt><label for=char-template>Template</label>
+				<dd><select id=char-template>
+					<option>
+					<option>Shade<!-- all -->
+					<option>Deva<!-- all -->
+					<optgroup label="Undead">
+						<option>Undead<!-- human, elf, half-elf, half-orc, half-ogre, ogre, yuan-ti, drow, half-drow, saurian, goblin, gnoll, bugbear, orc, firbolg, halfing, dwarf, beast-kin -->
+						<option>Vampire<!-- human, elf, half-elf, half-orc, half-ogre, ogre, yuan-ti, drow, half-drow, saurian -->
+					</optgroup>
+				</select>
+			</div>
+			<div>
+				<dt><label for=char-age>Age</label>
+				<dd><select id=char-age><!-- todo: add parenthetical ranges by race selection -->
+					<option id=age-young>young
+					<option id=age-adult>adult
+					<option id=age-elderly>elderly
+				</select>
+			</div>
+			<div>
+				<dt><label>Character Stats</label>
+				<dd><dl>
+					<div><dt>STR<dd><input id=char-str type=number value=6></div>
+					<div><dt>DEX<dd><input id=char-dex type=number value=6></div>
+					<div><dt>CON<dd><input id=char-con type=number value=6></div>
+					<div><dt>INT<dd><input id=char-int type=number value=6></div>
+					<div><dt>WIS<dd><input id=char-wis type=number value=6></div>
+					<div><dt>CHA<dd><input id=char-cha type=number value=6></div>
+				</dl>
+			</div>
+			<div>
+				<dt><label>Class Levels</label>
+				<dd>
+					<ol id=classes>
+						<li><!-- TODO: source from dataset -->
+							<input type=number value=1> levels in <select>
+								<option>cleric</option>
+								<option>fighter</option>
+								<option>psi-warrior</option>
+								<!-- ... -->
+							</select>
+						</li>
+					</ol>
+				</dd>
+			</div>
+			<div>
+				<dt><label for=""></label>
+				<dd>
+			</div>
+			<!--
+			<div>
+				<dt><label for=""></label>
+				<dd>
+			</div>
+			-->
+		</dl>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Feats</legend>
+		
+		<dl>
+			<div>
+				<dt><label>Magic Damage</label>
+				<dd><ul>
+					<li>Spell Power
+					<li>Improved Spell Power
+					<li>Greater Spell Power
+				</ul>
+			</div>
+		</dl>
+	</fieldset>
+	
+	<fieldset><!-- disable-able -->
+		<legend>Spells</legend>
+				
+		<dl>
+			<dt>Arcane</dt>
+			<dd>
+				<ol id=spells>
+					<li>
+						<ul>
+							<li class=common>Alter Self
+						</ul>
+					</li>
+				</ol>
+			<dt>Druid</dt>
+			<dd>
+				<ol id=spells>
+					<li>
+						<ul>
+							<li class=common>Alter Self
+							<li>Faerie Fire
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>Cat's Grace
+						</ul>
+					</li>
+				</ol>
+		</dl>
+	</fieldset>
+</form>
